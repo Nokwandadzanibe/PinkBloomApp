@@ -239,7 +239,7 @@ function StatusProgress({ current }) {
                   fontFamily: FONT_MONO,
                 }}
               >
-                {s === "Resolved" ? "✅" : s}
+                {s === "Resolved" ? "Done" : s}
               </div>
             </div>
             {i < STATUS_FLOW.length - 1 && <div style={{ width: 2, height: 2, borderRadius: "50%", background: DIM }} />}
@@ -586,7 +586,7 @@ function UserHome({ user, reports, onNav, loading }) {
   const recent = reports.slice(0, 3);
   return (
     <div style={{ padding: "22px 18px 10px" }}>
-      <div style={{ fontSize: 22, fontWeight: 700, color: INK }}>Hello, {user.name.split(" ")[0]} {"👋"}</div>
+      <div style={{ fontSize: 22, fontWeight: 700, color: INK }}>Hello, {user.name.split(" ")[0]}</div>
       <div style={{ fontSize: 14, color: DIM, margin: "4px 0 10px" }}>How can we help you bloom today?</div>
       <RolePill label="User" />
 
@@ -790,7 +790,7 @@ function PartnerDashboard({ user, reports, filter, setFilter, onAdvance, onReset
 
   return (
     <div style={{ padding: "22px 18px 10px" }}>
-      <div style={{ fontSize: 22, fontWeight: 700, color: INK }}>Hello, {user.name.split(" ")[0]} {"👋"}</div>
+      <div style={{ fontSize: 22, fontWeight: 700, color: INK }}>Hello, {user.name.split(" ")[0]}</div>
       <div style={{ fontSize: 14, color: DIM, margin: "4px 0 10px" }}>Manage and respond to community reports.</div>
       <RolePill label={user.role === "admin" ? "Admin" : "Partner"} />
 
